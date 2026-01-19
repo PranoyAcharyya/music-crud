@@ -46,12 +46,6 @@ export default function LibraryLayout() {
             >
               My Musics
             </NavLink>
-            <NavLink
-              to="/library/player"
-              className="block px-3 py-2 rounded hover:bg-gray-800"
-            >
-              Player
-            </NavLink>
 
             <button
               onClick={() => navigate("/")}

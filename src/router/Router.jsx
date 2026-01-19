@@ -1,7 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import Landing from "../Pages/Landing";
 import Login from "../Pages/Login";
-import Player from "../Pages/Player";
 import Signup from "../Pages/Signup";
 
 import PrivateRoute from "../components/PrivateRoute";
@@ -39,9 +38,6 @@ const Router = createBrowserRouter([
       {
         path: "mymusics",
         element: <MyMusics />,
-      },{
-        path:"player",
-        element: <Player/>
       }
     ],
   },

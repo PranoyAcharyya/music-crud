@@ -145,13 +145,13 @@ export default function MyMusics() {
         {/* BOTTOM PLAYER */}
         {currentTrack && (
           <div className="fixed bottom-0 left-0 right-0 bg-gray-900 p-4 flex items-center justify-between">
-            {/* LEFT: MUSIC ICON + NAME */}
+          
             <div className="flex items-center gap-3">
               <span className="text-2xl">🎵</span>
               <span>{currentTrack.name}</span>
             </div>
 
-            {/* CENTER: AUDIO PLAYER WITH TIMELINE */}
+       
             <audio
               ref={audioRef}
               controls
@@ -159,7 +159,7 @@ export default function MyMusics() {
               className="w-1/2"
             />
 
-            {/* RIGHT: NEXT / PREV */}
+          
             <div className="space-x-2">
               <button onClick={prev} className="bg-gray-700 px-3 py-1 rounded">
                 Prev

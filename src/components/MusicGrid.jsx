@@ -11,19 +11,12 @@ export default function MusicGrid() {
       {tracks.map(track => (
         <div
           key={track.id}
-          className={`p-4 rounded-lg cursor-pointer ${
+          className={`rounded-lg cursor-pointer ${
             currentId === track.id ? "bg-green-700" : "bg-gray-800"
           }`}
           onClick={() => dispatch(setCurrentTrack(track.id))}
         >
-          {track.thumbnail ? (
-            <img
-              src={track.thumbnail}
-              className="w-full h-32 object-cover rounded"
-            />
-          ) : (
-            <div className="text-5xl">🎵</div>
-          )}
+          <div className="text-5xl">🎵</div>
           <p className="mt-2">{track.name}</p>
         </div>
       ))}
