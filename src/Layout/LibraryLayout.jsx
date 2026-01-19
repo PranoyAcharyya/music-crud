@@ -19,55 +19,55 @@ export default function LibraryLayout() {
   return (
     <div className="flex h-screen bg-black text-white">
       {/* SIDEBAR */}
-      <div className="w-64 bg-gray-900 p-4 flex flex-col justify-between">
+      <div className="w-30 sm:w-64 bg-gray-900 p-3 sm:p-4 flex flex-col justify-between">
         <div>
-          <h2 className="text-xl font-bold mb-6">Music Studio</h2>
+          <h2 className="text-lg sm:text-xl font-bold mb-4 sm:mb-6 hidden sm:block">
+            Music Studio
+          </h2>
 
           {/* PROFILE */}
-          <div className="mb-6 bg-gray-800 p-3 rounded">
-            <p className="text-sm text-gray-400">Profile</p>
-            <p className="font-semibold">
+          <div className="mb-4 sm:mb-6 bg-gray-800 p-2 sm:p-3 rounded text-left sm:text-left">
+            <p className="text-xs sm:text-sm text-gray-400">Profile</p>
+            <p className="font-semibold text-sm sm:text-base">
               Hi, {currentUser?.name || "User"}
             </p>
           </div>
 
           {/* NAV TABS */}
-          <nav className="space-y-3 sidebar">
+          <nav className="space-y-2 sm:space-y-3 sidebar">
             <NavLink
               to="/library/upload"
-              className="block px-3 py-2 rounded hover:bg-gray-800"
+              className="block text-sm sm:text-base px-2 sm:px-3 py-2 rounded hover:bg-gray-800 text-left sm:text-left"
             >
               Upload
             </NavLink>
 
             <NavLink
               to="/library/mymusics"
-              className="block px-3 py-2 rounded hover:bg-gray-800"
+              className="block text-sm sm:text-base px-2 sm:px-3 py-2 rounded hover:bg-gray-800 text-left sm:text-left"
             >
               My Musics
             </NavLink>
 
             <button
               onClick={() => navigate("/")}
-              className="w-full text-left px-3 py-2 rounded hover:bg-gray-800"
+              className="w-full text-left text-sm sm:text-base px-2 sm:px-3 py-2 rounded hover:bg-gray-800"
             >
-              Back to Home
+              Home
             </button>
+
             <button
-          onClick={handleLogout}
-          className="bg-red-600 px-4 py-2 rounded text-white"
-        >
-          Logout
-        </button>
+              onClick={handleLogout}
+              className="w-full bg-red-600 text-sm sm:text-base px-3 sm:px-4 py-2 rounded text-white"
+            >
+              Logout
+            </button>
           </nav>
         </div>
-
-        
-        
       </div>
 
-   
-      <div className="flex-1 p-6 overflow-y-auto">
+      {/* MAIN CONTENT */}
+      <div className="flex-1 p-3 sm:p-6 overflow-y-auto">
         <Outlet />
       </div>
     </div>
