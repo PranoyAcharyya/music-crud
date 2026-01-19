@@ -53,19 +53,20 @@ export default function LibraryLayout() {
             >
               Back to Home
             </button>
-          </nav>
-        </div>
-
-        {/* LOGOUT */}
-        <button
+            <button
           onClick={handleLogout}
           className="bg-red-600 px-4 py-2 rounded text-white"
         >
           Logout
         </button>
+          </nav>
+        </div>
+
+        
+        
       </div>
 
-      {/* MAIN CONTENT AREA */}
+   
       <div className="flex-1 p-6 overflow-y-auto">
         <Outlet />
       </div>

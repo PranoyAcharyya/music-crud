@@ -8,7 +8,7 @@ export default function Landing() {
  console.log(isAuth);
  
   return (
-    <div className="bg-gradient-to-b from-black via-[#0b3a1f] to-[#1DB954] text-white min-h-screen flex flex-col items-center justify-center text-center px-6">
+    <div className="bg-gradient-to-b from-black via-[#0b3a1f] to-[#1db9547a] text-white min-h-screen flex flex-col items-center justify-center text-center px-6">
       <h1 className="text-5xl font-bold mb-4">
         Stream. Organize. Enjoy.
       </h1>
