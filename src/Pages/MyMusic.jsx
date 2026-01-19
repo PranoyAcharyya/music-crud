@@ -63,13 +63,17 @@ export default function MyMusics() {
         {/* VIEW TOGGLE */}
         <div className="flex justify-end gap-2 mb-4">
           <button
-            className="bg-gray-800 px-3 py-1 rounded"
+             className={`px-3 py-1 rounded ${
+      view === "list" ? "bg-green-600" : "bg-gray-800"
+    }`}
             onClick={() => setView("list")}
           >
             List
           </button>
           <button
-            className="bg-gray-800 px-3 py-1 rounded"
+             className={`px-3 py-1 rounded ${
+      view === "grid" ? "bg-green-600" : "bg-gray-800"
+    }`}
             onClick={() => setView("grid")}
           >
             Grid
